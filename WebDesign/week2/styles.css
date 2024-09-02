@@ -1,0 +1,22 @@
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 100%;
+    line-height: 1.35em;
+}
+/* Heading styles */
+h1 {
+    font-size: 32px;
+}
+/* Heading Title Description */
+h2 {
+    font-size: 24px;
+    text-align: center;
+    font-family: "Georgia", 'Times New Roman', Times, serif;
+}
+
+/* About Page Title Description */
+h3 {
+    font-size: 16px;
+}
+
+/* Footer area */

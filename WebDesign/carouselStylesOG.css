@@ -1,0 +1,108 @@
+/* Carousel container */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+/* Carousel inner */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.30s ease-in-out;
+}
+
+/* Carousel item */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Adjust image size */
+.carousel-item img {
+    max-width: 70%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+/* Carousel controls */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: crosshair;
+    z-index: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Carousel -prev*/
+.carousel-control-prev {
+    left: 10px;
+}
+
+/* Carousel -next*/
+.carousel-control-next {
+    right: 10px;
+}
+
+/* Hide inactive items */
+.carousel-item:not(.active) {
+    display: none;
+}
+
+/* Adjust the size and appearance of the arrow icons inside the controls */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: inline-block;
+    width: 15px; /* Adjust the size of the arrow icon */
+    height: 15px; 
+    background-size: 100%;
+    filter:  invert(100%); /* Invert the color of the arrow icon to make it white */
+}
+
+/* Hover effect to make the control buttons stand out when hovered */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight background color on hover */
+    border-color: rgba(255, 255, 255, 1); /* Make the border more prominent */
+    color: rgba(255, 255, 255, 1); /* Make the arrows fully white */
+}
+
+/* Autp-play toggle button styles */
+#autoPlayToggle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s ease;
+    z-index: 2;
+}
+
+/* Auto-play on state */
+.autoplay-on {
+    background-color: #006400; /* Dark green background */
+    color: #90ee90; /* Light green text */
+}
+
+/* Auto-play off state */
+.autoplay-off {
+    background-color:  #4d4d4d; /* Dark grey background */
+    color: #d3d3d3; /* Light grey text */
+}

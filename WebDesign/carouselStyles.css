@@ -1,0 +1,343 @@
+/* Carousel container */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+/* Carousel inner */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.30s ease-in-out;
+}
+
+/* Carousel item */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Adjust image size */
+.carousel-item img {
+    max-width: 70%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+/* Carousel controls */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: crosshair;
+    z-index: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Carousel -prev*/
+.carousel-control-prev {
+    left: 10px;
+}
+
+/* Carousel -next*/
+.carousel-control-next {
+    right: 10px;
+}
+
+/* Hide inactive items */
+.carousel-item:not(.active) {
+    display: none;
+}
+
+/* Adjust the size and appearance of the arrow icons inside the controls */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px; 
+    background-size: 100%;
+    filter:  invert(100%); /* Invert the color of the arrow icon to make it white */
+}
+
+/* Hide the text on small screens */
+@media (max-width: 768px) {
+    .carousel-control-prev span.sr-only,
+    .carousel-control-next span.sr-only {
+        display: none;
+    }
+}
+
+/* Adjust the arrow icons size on smaller screens */
+@media (max-width: 768px) {
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Hover effect to make the control buttons stand out when hovered */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight background color on hover */
+    border-color: rgba(255, 255, 255, 1); /* Make the border more prominent */
+    color: rgba(255, 255, 255, 1); /* Make the arrows fully white */
+}
+
+/* Hide the text on small screens */
+@media (max-width: 768px) {
+    .carousel-control-prev span.sr-only,
+    .carousel-control-next span.sr-only {
+        display: none;
+    }
+}
+/* End of Carousel controls */
+
+/* Minimalist design for the image indicators */
+.carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3 ease, transform 0.3s ease;
+}
+
+/* Active indicator style*/
+.carousel-indicators li.active {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.2); /* Slightly enlarge active indicator */
+}
+
+/* Hover effect for the indicators */
+.carousel-indicators li:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Styles for the enlarged image and text */
+.enlarged-container {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 900px;
+    background-color: rgba(240, 240, 240, 0.95);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Appear above other elements */
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Enlarged image styling */
+.enlarged-image {
+    max-width: 50%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Enlarged text styling */
+.enlarged-text {
+    max-width: 35%;
+    margin-left: 20px;
+    font-size: 1.1em;
+    color: #333;
+    text-align: justify;
+}
+
+/* Close button for enlarged container */
+.enlarged-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* End of  the Minimalist design for the image indicators */
+
+/* Auto-play toggle button styles */
+#autoPlayToggle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s ease;
+    z-index: 2;
+}
+
+/* Auto-play on state */
+.autoplay-on {
+    background-color: #006400; /* Dark green background */
+    color: #90ee90; /* Light green text */
+}
+
+/* Auto-play off state */
+.autoplay-off {
+    background-color:  #4d4d4d; /* Dark grey background */
+    color: #d3d3d3; /* Light grey text */
+}
+
+/* Flexbox for smaller screens */
+@media (max-width: 768px) {
+    /* Auto-play toggle button */
+    #autoPlayToggle {
+        font-size: 8px; /* Reduce font size */
+        padding: 4px 10px; /* Reduce padding */
+        bottom: 8px; /* Adjust position */
+        right: 8px; /* Adjust position */
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+    /* The auto-play toggle button */
+    #autoPlayToggle {
+        font-size: 10px; /* Reduce font size */
+        padding: 4px 10px; /* Reduce padding */
+        bottom: 6px; /* Adjust position */
+        right: 6px; /* Adjust position */
+    }
+}
+/* End of Auto-play toggle button styles */
+
+/* General Carousel styles remain unchanged */
+
+/* Flexbox for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust the carousel container */
+    .carousel {
+        width: 100%;
+        padding: 10px; /* Add some padding for smaller screens */
+        border-radius: 5px; /* Slightly smaller border radius */
+    }
+
+    /* Adjust carousel inner for Flexbox */
+    .carousel-inner {
+        display: flex;
+        flex-direction: column; /* Stack carousel items vertically */
+        align-items: center;    /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+    }
+
+    /* Adjust carousel item for smaller screens */
+    .carousel-item {
+        min-width: 100%;
+        text-align: center;
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+
+    /* Adjust image size for smaller screens */
+    .carousel-item img {
+        max-width: 90%; /* Reduce the image size for smaller screens */
+        max-height: 300px; /* Adjust max-height for smaller screens */
+    }
+
+    /* Carousel controls - adjust size and position */
+    .carousel-control-prev, .carousel-control-next {
+        width: 30px;
+        height: 30px;
+        top: 45%; /* Adjust position on smaller screens */
+    }
+
+    /* Adjust the size of the arrow icons inside the controls */
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 12px; /* Smaller icon size */
+        height: 12px;
+    }
+
+    /* Adjust the enlarged container for smaller screens */
+    .enlarged-container {
+        width: 90%; /* Reduce width for smaller screens */
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 15px; /* Add padding */
+    }
+
+    /* Adjust the enlarged image for smaller screens */
+    .enlarged-image {
+        max-width: 80%; /* Adjust image size */
+        max-height: 200px; /* Reduce height for smaller screens */
+    }
+
+    /* Adjust the enlarged text for smaller screens */
+    .enlarged-text {
+        max-width: 100%; /* Use full width */
+        margin-left: 0;  /* Remove margin for better alignment */
+        margin-top: 15px; /* Add spacing between image and text */
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
+/* Additional adjustments for very small screens (e.g., phones) */
+@media (max-width: 480px) {
+    /* Further reduce image size */
+    .carousel-item img {
+        max-width: 80%;
+        max-height: 250px;
+    }
+
+    /* Make controls smaller */
+    .carousel-control-prev, .carousel-control-next {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Adjust icon size */
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Adjust enlarged container for very small screens */
+    .enlarged-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    /* Further reduce enlarged image size */
+    .enlarged-image {
+        max-width: 70%;
+        max-height: 150px;
+    }
+
+    /* Reduce text size for very small screens */
+    .enlarged-text {
+        font-size: 0.9em;
+    }
+}
+/* End of General Carousel styles remain unchanged */

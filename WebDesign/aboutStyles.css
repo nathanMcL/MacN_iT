@@ -1,0 +1,251 @@
+/* General body styling */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 100%;
+    background-color: #e5f0f8;
+}
+
+/* Header styles for the about page */
+.header-about {
+    background-image: url(/WebDesignSummer24/WebDesign/images/IMG_9940.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    padding: 20px 0;
+    min-height: 300px;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+/* Gradual change the color for each letter */
+header h1 span {
+    display: inline-block;
+    animation: colorChange 20s infinite;
+}
+
+/* Keyframes for the color change */
+@keyframes colorChange {
+    0% {
+        color: rgb(46, 139, 87);
+    }
+    20% {
+        color: rgb(255, 0, 0);
+    }
+    40% {
+        color: rgb(0, 255, 0);
+    }
+    60% {
+        color: rgb(0, 0, 255);
+    }
+    80% {
+        color: rgb(255, 255, 0);
+    }
+    100% {
+        color: rgb(46, 139, 87);
+    }
+}
+
+/* Positioning and styling the h1 tag */
+header h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 5px;
+    font-size: 2.5em;
+    z-index: 10;
+}
+
+/* Make the h1 tag clickable */
+header h1 a {
+    text-decoration: none;
+    color: rgb(46, 139, 87);
+}
+
+/* Add hover effect to the h1 tag */
+header h1 a:hover {
+    color: rgba(32, 95, 59, 0.1);
+}
+
+/* Flexbox container for the main content */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Flexbox columns */
+.flex-column {
+    flex: 1; /* Each column takes up equal space */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image scaling inside the table */
+.flex-column img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px; /* adds rounded corners */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+}
+
+/* Header sections styling */
+#header1, #header2 {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: opx, 4px, 6px, rgba(0, 0, 0, 0.1);
+}
+
+/* Main section styling */
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    color: rgb(46, 139, 87);
+    padding: 10px 0;
+}
+
+ol {
+    padding-left: 20px;
+    list-style: decimal;
+}
+
+ol li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* End of Main section styling */
+
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    border-top: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-column {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Marquee styles */
+:root {
+    --marquee-width: 98vw;
+    --marquee-height: 10vh;
+    /* --marquee-elements: 12; */ /* defined with JavaScript */
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+  }
+
+.marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    background-color: #282626;
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto; /* Center and add spacing */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.marquee:before, .marquee:after {
+    position: absolute;
+    top: 0; 
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+.marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+}
+
+.marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+
+.marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    max-height: 100%;
+    font-size: calc(var(--marquee-height)*3/4); /* Adjust size */
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+.marquee-content li img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    :root {
+        --marquee-width: 100vw;
+        --marquee-height: 16vh;
+        --marquee-elements-displayed: 3;
+    }
+    .marquee:before, .marquee:after {
+        width: 5rem;
+    }
+
+    /* For smaller images on smaller screens */
+    .marquee-content img {
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
+/* End of Marquee styles */

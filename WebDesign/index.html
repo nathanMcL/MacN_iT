@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="description" content="Welcome to the MacN website! Learn more about us and explore our content...">
+        <title>Web Design: Home Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!-- CSS for carousel -->
+        <link rel="stylesheet" href="carouselStyles.css">
+        <!-- Security headers -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; font-src 'self' data:;">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta name="referrer" content="no-referrer">
+
+        
+    </head>
+    <body>
+        <header class="header-index">
+            <h1>
+                <a href="about.html">
+                    <span class="floating">M</span>
+                    <span class="floating">a</span>
+                    <span class="floating">c</span>
+                    <span class="floating">N</span>
+                </a>
+            </h1>
+
+            <h2><a href="contact.html">
+                <span>W</span><span>e</span><span>b</span><span></span><span>D</span><span>e</span><span>s</span><span>i</span><span>g</span><span>n</span></a></h2>
+           <!-- Hamburger Menu -->
+            <nav>
+                <div class="menu-icon" id="menu-icon">&#9776;</div>
+                <ul id="menu-items">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>    
+        </header>
+
+        <main>
+            <section id="home">
+                <p> Welcome to the MacN website! </p>
+                <p>Lorem ipsum dolor sit amet, <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">cat</a> consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. <a href="https://en.wikipedia.org/wiki/Dog" target="_blank">Dog</a> vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. <a href="https://en.wikipedia.org/wiki/Dog" target="_blank">Dog</a> sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">cat</a> nibh. Quisque volutpat condimentum velit.</p>
+            
+                <p><a href="https://en.wikipedia.org/wiki/Dog" target="_blank">Dog</a> nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. <a href="https://en.wikipedia.org/wiki/Dog" target="_blank">Dog</a> nec mollis sem. Morbi <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">cat</a> euismod felis eget nisl. Nullam volutpat eros eu erat. Nulla facilisi. Proin eget tortor risus. In posuere felis nec enim euismod, et consequat purus eleifend. Etiam aliquam massa quis mauris rhoncus, ut fermentum urna dapibus. Nulla facilisi. Duis sit amet eros ut nulla fermentum lobortis. Morbi id augue nec lectus pharetra suscipit at et lorem. Cras scelerisque, felis vitae bibendum scelerisque, eros purus scelerisque risus, at vehicula felis dolor vel sapien. Etiam non ligula massa. <a href="https://en.wikipedia.org/wiki/Dog" target="_blank">Dog</a> felis risus, suscipit et ultrices non, suscipit eget nunc.</p>
+            </section>
+            
+            <!-- Carousel slide effect -->
+            <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators"></ol>
+                <div class="carousel-inner"></div>
+                <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span> <!-- This will be hidden on smaller screens -->
+                </a>
+                <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span> <!-- This will be hidden on smaller screens -->
+                </a>
+                <!-- Auto-play toggle button -->
+                <button id="autoPlayToggle" class="autoplay-on">Auto Play On</button>
+            </div>
+
+        <section id="middlePage">
+            <p> Lorem ipsum Table </p>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+            <!-- Table  -->
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Row 1, Col 1, Header</th>
+                        <th>Row 1, Col 2, Header</th>
+                        <th>Row 1, Col 3, Header</th>
+                        <th>Row 1, Col 4, Header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><!-- Row 2 -->
+                        <td>
+                            <!-- Row 2, Col 1 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9943.JPG" alt="Image 1" class="clickable-img">
+                        </td>
+                        <td>
+                            <!-- Row 2, Col 2 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9944.JPG" alt="Image 2" class="clickable-img">
+                        </td>
+                        <td>
+                            <!-- Row 2, Col 3 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9835.JPG" alt="Image 3" class="clickable-img">
+                        </td>
+                        <td>
+                            <!-- Row 2, Col 4 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9537_LoveWins.JPG" alt="Image 4" class="clickable-img">
+                        </td>
+                    </tr>
+                    <tr><!-- Row 3 -->
+                        <td>
+                            <!-- Row 3, Col 1 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9841.JPG" alt="Image 5" class="clickable-img">
+                        </td>
+                        <td>
+                            <!-- Row 3, Col 2 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9848.JPG" alt="Image 6" class="clickable-img">
+                        </td>
+                        <td>
+                            <!-- Row 3, Col 3 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9950.JPG" alt="Image 7" class="clickable-img">
+                        </td>
+                        <td>
+                            <!-- Row 3, Col 4 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9856.JPG" alt="Image 8" class="clickable-img">
+                        </td>
+                    </tr>
+                    <tr><!-- Row 4 -->
+                        <td>
+                            <!-- Row 4, Col 1 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9860.JPG" alt="Image 9" class="clickable-img">
+                        </td>
+                        <td>
+                            <!-- Row 4, Col 2 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9566.JPG" alt="Image 10" class="clickable-img">
+                        </td>
+                        <td>
+                            <!-- Row 4, Col 3 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9772.JPG" alt="Image 11" class="clickable-img">
+                        </td>
+                        <td>
+                            <!-- Row 4, Col 4 -->
+                            <img src="/WebDesignSummer24/WebDesign/images/IMG_9573.JPG" alt="Image 12" class="clickable-img">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- Modal structure for table iamge popup -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times:</span>
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
+            </div>
+        
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Fringilla quis commodo mauris curae bibendum parturient. Sollicitudin libero netus senectus fusce, nulla fringilla integer. Imperdiet scelerisque duis ad urna; arcu feugiat in. Semper quam massa tempus vestibulum euismod ad. Tincidunt nam maecenas parturient dictum tincidunt luctus consectetur velit. Himenaeos parturient eu suspendisse elementum nibh scelerisque facilisi orci. Odio imperdiet parturient, id aliquet senectus malesuada.</p>
+        </section>
+        <section>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Saturn Vivamus interdum felis ut Uranus erat fermentum, nec Venus magna vulputate. Maecenas a Mars orci, at efficitur Jupiter Etiam lacinia Neptune lacus vel arcu volutpat, id dictum felis auctor. In Mercury sit amet mi hendrerit, pellentesque Earth ex at, cursus Mars urna. Donec a ligula Venus et augue auctor scelerisque. Cras auctor nec est ut scelerisque. Praesent malesuada dolor quis sapien elementum, nec cursus Neptune justo pellentesque. Suspendisse potenti. Phasellus auctor venenatis urna at viverra.
+            </p>
+            
+            <p>
+                Aenean sagittis leo Saturn sit amet eros faucibus, ut convallis libero varius. Duis nec Jupiter metus. In ut mauris eu Mercury dapibus viverra. Nam vestibulum, odio id Earth viverra faucibus, justo orci ullamcorper Uranus, id suscipit libero ligula ac metus. Proin venenatis Neptune magna nec dui sagittis, sit amet vehicula neque fringilla. Phasellus tristique Venus diam at nisi elementum lacinia. Nullam ac bibendum massa. Aliquam erat volutpat. Curabitur id arcu ut velit suscipit ullamcorper vel Mars sapien.
+            </p>
+            <fieldset class="int-input">
+                <legend>Planet Input Elemnts</legend>
+                <p>
+                <label for="suggested"> Chosen Planet: </label>
+                <input type="text" name="suggested" id="suggested" list="suggested" />
+                    <datalist id="suggestions">
+                        <option id="Saturn">
+                        <option id="Jupiter">
+                        <option id="Mars">
+                        <option id="Venus">
+                        <option id="Mercury">
+                        <option id="Earth">
+                        <option id="Neptune">
+                        <option id="Uranus">
+                    </datalist><br/><button class="selectPlanet" role="button">Select</button>
+                    <label for="choice">Choose a Planet: </label>
+                <select name="choice" id="choice" multiple>
+                    <option>Saturn</option>
+                    <option>Jupiter</option>
+                    <option>Mars</option>
+                    <option>Venus</option>
+                    <option>Mercury</option>
+                    <option>Earth</option>
+                    <option>Neptune</option>
+                    <option>Uranus</option>
+                </select>
+                </p>
+
+            </fieldset>
+        </section>
+        <section>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Aliquet sollicitudin mus interdum potenti bibendum erat pretium rhoncus commodo. Ex ipsum facilisis proin montes; blandit ipsum tempus. Curae vitae ut; habitasse magna habitant condimentum platea. Lobortis ipsum vehicula dictum elementum enim. Tristique lacus neque efficitur vestibulum taciti sagittis ullamcorper facilisi ac. Tincidunt ante augue, phasellus venenatis turpis aptent leo. Malesuada condimentum ornare purus netus suspendisse luctus facilisis. Volutpat quam ac ex non aliquet mi mi. **Cheeseburger**.</p>
+
+            <p>Tincidunt finibus lorem mollis taciti potenti diam. Primis nostra aenean mattis vel nec vivamus pharetra fames tempor. Sit finibus amet consectetur vel fusce tincidunt lobortis pellentesque. **Baked beans** tristique tempor commodo dapibus hac taciti. Neque in id dolor; condimentum ac eleifend. Class mollis aptent ipsum mollis dictumst primis quis. **Hotdog** etiam ante nec in gravida vel aliquam pulvinar. **Baked beans** sagittis sollicitudin egestas viverra euismod ornare dui eget facilisi. Nascetur sem montes pellentesque hac facilisi enim sapien diam sagittis. **Cheeseburger dolor hendrerit** quisque donec pretium etiam, rhoncus adipiscing convallis.</p>
+
+            <p>Lorem ipsum **Baked beans** dolor sit amet, consectetuer adipiscing elit. **Cheeseburger** sollicitudin mus interdum potenti bibendum erat pretium rhoncus commodo. Ex ipsum facilisis proin montes; blandit ipsum tempus. Curae vitae ut; habitasse magna habitant condimentum platea. Lobortis **Hotdog** vehicula dictum elementum enim. Tristique lacus neque efficitur vestibulum taciti sagittis ullamcorper facilisi ac. Tincidunt ante augue, phasellus venenatis turpis aptent leo. Malesuada condimentum ornare purus netus suspendisse luctus facilisis. **Baked beans** volutpat quam ac ex non aliquet mi mi.</p>
+
+            <p>Tincidunt finibus lorem mollis taciti potenti diam. Primis nostra aenean mattis vel nec vivamus pharetra fames tempor. Sit finibus amet consectetur vel fusce tincidunt lobortis pellentesque. **Baked beans** tristique tempor commodo dapibus hac taciti. Neque in id dolor; condimentum ac eleifend. Class mollis aptent ipsum mollis dictumst primis quis. **Baked beans** sagittis sollicitudin egestas viverra euismod ornare dui eget facilisi. **Cheeseburger** nascetur sem montes pellentesque hac facilisi enim sapien diam sagittis. **Hotdog** dolor hendrerit quisque donec pretium etiam, rhoncus adipiscing convallis.</p>
+        <fieldset class="int-food-input">
+            <legend>Cheeseburger, Hotdog, Baked Beans...</legend>
+            <p>
+                <label for="cheeseburger">Cheeseburger</label>
+                <input type="radio" name="foodChoice" id="cheeseburger" value="Cheeseburger">
+            </p>
+            <p>
+                <label for="hotdog">Hotdog</label>
+                <input type="radio" name="foodChoice" id="hotdog" value="Hotdog">
+            </p>
+            <p>
+                <label for="bakedBeans">Baked Beans</label>
+                <input type="radio" name="foodChoice" id="bakedBeans" value="Baked Beans">
+            </p>
+
+            <!-- Hidden message and dropdown -->
+            <p id="hiddenMessage">How many of the selected <span id="selectedFood"></span> are in the above paragraphs?</p>
+            
+            <!-- Select options for the answer -->
+            <select id="foodAnswer"></select>
+
+            <!-- Select button (hidden until user makes a selection) -->
+            <button id="confirmSelection" class="selectPlanet" role="button">Select</Select></button>
+            
+
+            <!-- New hidden message for correct / incorrect selections -->
+            <p id="correctMessage">Correct! There are <span id="correctCount"></span><span id="selectedFoodCorrect"></span> items in the paragraphs.</p>
+            <p id="incorrectMessage">Next time...</p>
+
+            <!-- Countdown timer -->
+            <p id="countdown" style="display:none; position: absolute; top: 10px; right: 10px;">10</p>
+        </fieldset>
+    </section>
+
+
+                
+            
+        </fieldset>
+        </section>
+
+
+        </main>
+
+        <footer>
+            <p>&copy; 2024 MacN at macn.webwork.space All Rights Reserved</p>
+        </footer>
+
+        <!-- JS for carousel -->
+        <script src="script.js" defer></script>
+
+    </body>
+</html>
+
+        

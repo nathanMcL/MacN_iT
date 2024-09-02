@@ -1,0 +1,855 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 100%;
+    background-color: #aed9f8;
+    
+}
+
+/* Header styles for the index page */
+.header-index {
+    background-image: url(/WebDesignSummer24/WebDesign/images/IMG_9939.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    /*border-width: 1px;*/
+    padding: 10px 0;
+    position: relative;
+    border-radius: 50%; /* Start as circular */
+    min-height: 300px;
+    width: 300px;
+    height: 300px;
+
+
+/* Flexbox properties */
+display: flex;
+flex-direction: column; 
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 20px;
+position: relative;
+overflow: hidden; /* Hides the access or overflow of the background image */
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+margin: 0 auto; /* Center the portal to maintain its shape... */
+transition: border-radius 0.5s ease, width 0.5s ease, height 0.5s ease; /* Provide a smooth transition for the shape */
+}
+/* End of Flexbox properties */
+
+/* Border to simulate a metallic rim of the cruise ship portal */
+.header-index::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Circular border to mimic the portal window */
+    border: 10px solid #999; /* Thickness and color of the portal border */
+    box-sizing: border-box; /* Ensure the border is within the element's size */
+}
+@media (max-width: 600px) {
+    .header-index {
+        min-height: 200px; /* Smaller height for the background image layout */
+        width: 200px; /* Scale down the width of the circular portal */
+        height: 200px; /* Scale down the height of the circular portal */
+    }
+}
+
+/* When: `Inspect/Resposive` this design is for medium size screens (600px - 1024px) */
+@media (min-width:601px) and (max-width: 1024px) {
+    .header-index{
+        width: 400px;
+        height: 400px;
+        border-radius: 50%; 
+    }
+}
+
+/* When: `Inspect/Resposive` this design is for large size screens (600px - 1024px)*/
+/* When: Viewing on a large screen the "Portal view" should be streched across the backgroung image... */
+@media (min-width: 1025px) {
+    .header-index {
+        width: 90%; /* Elongate the portal width */
+        height: 400%; /* Slighty increase the height */
+        border-radius: 50% / 30%; /* Elongate the shape */
+    }
+    /* Lawd, adjust the metallic border...as the screen sizes */
+    .header-index::before {
+        border-radius: 50% / 30%;
+    }
+}
+
+/* Positioning the h1 tag */
+header h1 {
+    position: absolute;
+    top: 5px; /* Adjust the padding from the top */
+    left: 5px; /* Adjust the padding from the left */
+    margin: 10px 0;
+    padding: 0;
+    font-size: 1.5em; /* Adjust the size as needed */
+    z-index: 10;
+    width: calc(100% - 10px); /* Make sure the h1 width scales with the portal */
+    height: calc(100% - 10px); /* Make sure the h1 height scales with the portal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjust the font size based on screen size */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 2em; /* Slightly larger font for medium screens */
+    }
+}
+
+@media (min-width: 1025px) {
+    header h1 {
+        font-size: 2.5em; /* Even larger font for large screens */
+    }
+}
+
+/* Make the h1 tag clickable */
+header h1 a {
+    text-decoration: none;
+    color: rgb(46, 139, 87); /* Default color */
+    display: inline-block;
+}
+
+/* Add hover effect to the h1 tag */
+header h1 a:hover {
+    color: rgb(32, 95, 59); /* Change the color on hover */
+}
+
+/* Gradual change the color for each letter */
+header h1 a span {
+    display: inline-block;
+    animation: colorChange 20s infinite;
+}
+
+/* Keyframes for the color change */
+@keyframes colorChange {
+    0% {
+        color: rgb(46, 139, 87);
+    }
+    20% {
+        color: rgb(255, 0, 0);
+    }
+    40% {
+        color: rgb(0, 255, 0);
+    }
+    60% {
+        color: rgb(0, 0, 255);
+    }
+    80% {
+        color: rgb(255, 255, 0);
+    }
+    100% {
+        color: rgb(46, 139, 87);
+    }
+}
+
+/* Floating text Header `MacN` text */
+.floating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: floatText 10s linear infinite;
+    animation: colorChange 20s infinite;
+}
+
+/* Bouncing effect keyframes for small screens */
+@keyframes floatText {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(70%, 10%); }
+    50% { transform: translate(90%, 80%); }
+    75% { transform: translate(20%, 70%); }
+    100% { transform: translate(0, 0); }
+}
+
+/* For medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    @keyframes floatText {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(60%, 10%); }
+        50% { transform: translate(80%, 70%); }
+        75% { transform: translate(15%, 60%); }
+        100% { transform: translate(0, 0); }
+    }
+}
+
+/* For large screens */
+@media (min-width: 1025px) {
+    @keyframes floatText {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(50%, 10%); }
+        50% { transform: translate(70%, 60%); }
+        75% { transform: translate(10%, 50%); }
+        100% { transform: translate(0, 0); }
+    }
+}
+
+/* End of Floating text Header `MacN` text */
+
+/* Positioning the h2 tag */
+header h2 {
+    position: absolute;
+    bottom: 60px; 
+    right: 20px;
+    margin: 10px 0;
+    padding: 0;
+    font-size: 2em; 
+    z-index: 10;
+}
+
+/* Make the h2 tag clickable */
+header h2 a {
+    text-decoration: none;
+    color: rgb(46, 139, 87); /* Default */
+    display: inline-block;
+}
+
+/* Add hover effect to the h2 tag */
+header h2 a:hover {
+    color: rgb(32, 95, 59); /* Change the color on hover */
+}
+
+/* Gradual change the color for each letter */
+header h2 a span {
+    display: inline-block;
+    animation: colorChange 20s infinite;
+}
+
+/* Keyframes for the color change */
+@keyframes colorChange {
+    0% {
+        color: rgb(67, 204, 120);
+    }
+    20% {
+        color: rgb(223, 58, 58);
+    }
+    40% {
+        color: rgb(12, 192, 12);
+    }
+    60% {
+        color: rgb(32, 32, 218);
+    }
+    80% {
+        color: rgb(224, 224, 48);
+    }
+    100% {
+        color: rgb(12, 103, 52);
+    }
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    top: 10px; /* Original value = 10px. Location at the top-right */
+    right: 10px; /* Original value = 10px. Location at the right-top 10px away from the edge */
+    cursor: pointer;
+    z-index: 30; /* Keeps the icon on top, so as to not get hidden by flying objects... */
+}
+
+/* Menu items hidden by default */
+#menu-items {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 60px; 
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Partially transparent background */
+    border-radius: 10px;
+    list-style-type: none;
+    padding: 10px;
+    z-index: 40;
+}
+
+/* When the menu is visable */
+.menu-visible {
+    display: block; /* Show the menu items when this class is applied */
+}
+
+/* Menu items styling */
+#menu-items li {
+    margin: 10px 0;
+}
+
+#menu-items li a {
+    text-decoration: none;
+    color: #e23b3b;
+    font-size: 12px;
+    display: block;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#menu-items li a:hover {
+    background-color: rgba(73, 62, 62, 0.4);
+    border-radius: 5px;
+}
+
+/* When the menu is visible */
+.menu-visible #menu-items {
+    display: block;
+    color: #e23b3b;
+    font-size: 14px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .menu-icon {
+        font-size: 25px; /* Adjust icon size for smaller screens */
+        top: 45px; /* Original value = 10px. Location at the top-right */
+        right: 30px; /* Original value = 10px. Location at the right-top 10px away from the edge */
+    }
+    
+    #menu-items {
+        top: 40px; /* Adjust positioning for smaller screens */
+    }
+}
+
+/* Larger screens (1025px and above) */
+@media (min-width: 1025px) {
+    .menu-icon {
+        top: 80px; /* Original value = 10px. Location at the top-right */
+        right: 15px; /* Original value = 10px. Location at the right-top 10px away from the edge */
+        display: block; /* Ensure the hamburger menu is visible */
+    }
+    
+    #menu-items {
+        top: 350px; /* Position menu relative to the hamburger icon */
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        z-index: 40; /* Ensure the menu is on top */
+    }
+}
+
+/* Attach the hamburger menu button to the header-index::before 
+.header-index::before {
+    z-index: 20;
+} */
+
+/* Additional styling for the header-index */
+.header-index {
+    position: relative;
+}
+/* Hamburger Menu Icon */
+/* End of Header styles for the index page */
+
+/* Flexbox layout for the main content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* End of Flexbox layout for the main content */
+
+/* Highlighted Lorem ipsum cat and dog elements*/
+a[href*="wikipedia.org"] {
+    font-weight: normal;
+    color: #000000;
+    text-decoration: underline dotted #f17107;
+}
+
+a[href*="wikipedia.org"]:hover {
+    color: #1a5fa4;
+}
+
+/* End of Highlighted Lorem ipsum cat and dog elements*/
+
+/* Table Styles */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    border-radius: 10px;
+    border-spacing: 0;
+}
+
+.styled-table tr {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.styled-table td {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #e3e9bc;
+    width: 25%; /* Four columns in a row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768) {
+    .styled-table td {
+        width: 50%; /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .styled-table td {
+        width: 100%; /* 1 column for small screens */
+    }
+}
+
+/* Highlight individual cell during hover */
+.styled-table td:hover {
+    background-color: #f5c7a2; /* Header Background */
+    font-weight: bold;
+}
+
+.styled-table tr:first-child td {
+    font-weight: bold;
+}
+
+/* Image scaling inside the table */
+.styled-table img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Set a consistent max-height for images */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+}
+
+/* Header Row Styling */
+.styled-table thead th {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e9bc;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.styled-table th {
+    padding: 10px;
+    border: 1px solid #e3e9bc;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Ensure that each column header takes up equal space */
+.styled-table th {
+    width: 25%; /* Ensures four columns fit within 100% width */
+}
+
+/* Table Body Rows */
+.styled-table tbody tr {
+    border-bottom: 1px solid #ddd;
+    display: -moz-grid-group; /* Original setting was `top` */
+}
+
+.styled-table tbody td {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #e3e9bc;
+    text-align: center;
+    /*vertical-align: top;  Align images to the top of the cell */
+}
+
+.styled-table tbody img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* For Responsive layouts Medium Screens */
+@media (max-width: 768px) {
+    .styled-table, .styled-table td {
+        width: 100%;
+    }
+    .styled-table thead,
+    .styled-table tbody,
+    .styled-table th,
+    .styled-table td,
+    .styled-table tr {
+        display: block;
+        width: 100%;
+    }
+    
+    .styled-table thead{
+        display: table-header-group;  /* Keep the header at the top */
+    }
+    
+    .styled-table tbody tr {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+    }
+
+    .styled-table tbody td {
+        width: 48%; /* Two columns per row */
+        margin-bottom: 10px;
+    }
+
+    .styled-table th {
+        text-align: center;
+    }
+
+    .styled-table tr {
+        margin-bottom: 20px;
+    }
+    .styled-table td {
+        width: 50%;
+        box-sizing: border-box;
+    }
+}
+
+/* Responsive Layout for smaller screens */
+@media (max-width: 480px) {
+    .styled-table tbody tr {
+        width: 100%; /* One colum for smaller screens */
+        display: block;
+    }
+
+    .styled-table tbody td {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .styled-table img {
+        max-width: 100%;
+    }
+}
+
+/* Highligh individual cell during hover */
+.styled-table td:hover {
+    background-color: #f5c7a2;
+    font-weight: bold;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.modal-content {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* End of Table Styles */
+
+/* Fieldset for user input - Planet suggestions */
+.int-input {
+    border: 2px solid #cccccc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.int-input legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333333;
+    padding: 0 10px;
+}
+
+.int-input label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.int-input input[type="text"],
+.int-input select {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.int-input input[type="text"]:focus,
+.int-input select:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.int-input select {
+    width: 82%;
+    height: 40px;
+}
+
+.int-input select[multiple] {
+    height: auto;
+}
+
+.int-input option {
+    padding: 5px;
+    font-size: 1em;
+}
+
+.int-input p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* End of Input Section Styles */
+
+
+/* "Chosen Planet" Button */
+.selectPlanet {
+    appearance: button;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 0 solid #e5e7eb;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #482307;
+    column-gap: 1rem;
+    cursor: pointer;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,
+    "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+    outline: 2px solid transparent;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-transform: none;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+
+.selectPlanet:active {
+    background-color: #f3f4f6;
+    box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15), 0px 1px 1px rgba(81, 41, 10, 0.15);
+    transform: translateY(0.125rem);
+}
+
+.selectPlanet:focus {
+    box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+
+/* Food selection */
+/* Style for the select dropdown */
+/* Fieldset for food selection - Cheeseburger, Hotdog, Baked Beans */
+.int-food-input {
+    border: 2px solid #cccccc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.int-food-input legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333333;
+    padding: 0 10px;
+}
+
+.int-food-input label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.int-food-input input[type="radio"] {
+    margin-right: 10px;
+}
+
+.int-food-input select {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.int-food-input select:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.int-food-input p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Use the style similar to the .selectPlanet section */
+.int-food-input #confirmSelection {
+    appearance: button;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 0 solid #e5e7eb;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #482307;
+    column-gap: 1rem;
+    cursor: pointer;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,
+    "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+    outline: 2px solid transparent;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-transform: none;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+
+.int-food-input #confirmSelection:active {
+    background-color: #f3f4f6;
+    box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15), 0px 1px 1px rgba(81, 41, 10, 0.15);
+    transform: translateY(0.125rem);
+}
+
+.int-food-input #confirmSelection:focus {
+    box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+
+/* Countdown timer styling specific to food selection */
+.int-food-input #countdown {
+    font-size: 1.5em;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+/* End of Food selection */
+
+/* Footer styling layout */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    border-top: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Footer navigation with Flexbox */
+footer nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: rgb(46, 139, 87);
+}
+
+@media (max-width: 600px) {
+    /* Adjust header and navigation for mobile screens */
+    header h1 {
+        font-size: 1.2em;
+        padding: 0;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    /* Center navigation items on mobile */
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Adjust main content padding on smaller screens */
+    main {
+        padding: 10px;
+    }
+
+    /* Adjust table layout on mobile */
+    .styled-table td {
+        flex: 1 1 100%; /* Full width on mobile */
+    }
+
+    /* Adjust footer layout on mobile */
+    footer {
+        padding: 10px;
+    }
+}

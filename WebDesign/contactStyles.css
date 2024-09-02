@@ -1,0 +1,555 @@
+/* Body styling */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 100%;
+    background-color: #e5f0f8;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header styles for the contact page */
+.header-contact {
+    background-image: url(/WebDesignSummer24/WebDesign/images/IMG_9942.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    border-width: 1px;
+    padding: 20px 0;
+    min-height: 300px;
+    position: relative;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.header-contact h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 10px 20px;
+    color: rgb(46, 139, 87);
+    letter-spacing: 0.1em;
+    z-index: 10;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.24);
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Navigation */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(16, 147, 147);
+    font-size: 1.2em;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.24);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(38, 164, 202, 0.8);
+    color: #fff;
+}
+
+/* Change the color for each letter in the h1 tag */
+/* header h1 */
+header h1 span {
+    display: inline-block;
+    animation: colorChange 20s infinite;
+}
+
+/* Keyframes for the color change (mirroring the about page), need to add the `colorChange` script, & html span tags */
+@keyframes colorChange {
+    0% {
+        color: rgb(46, 139, 87);
+    }
+    20% {
+        color: rgb(255, 0, 0);
+    }
+    40% {
+        color: rgb(0, 255, 0);
+    }
+    60% {
+        color: rgb(0, 0, 255);
+    }
+    80% {
+        color: rgb(255, 255, 0);
+    }
+    100% {
+        color: rgb(46, 139, 87);
+    }
+}
+
+h1 {
+    font-size: 2.53em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 5px;
+    color: rgb(46, 139, 87);
+    letter-spacing: .1em;
+    padding: 5px 5px;
+    z-index: 10;
+}
+
+/* Make the h1 tag clickable */
+header h1 a {
+    text-decoration: none;
+    color: rgb(46, 139, 87);
+}
+
+/* Add hover effect to the h1 tag */
+header h1 a:hover {
+    color: rgba(32, 95, 59, 0.1);
+}
+
+/* Flexbox container for the main content */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Flexbox columns */
+.flex-column {
+    flex: 1; /* Each column takes up equal space */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* End of header h1 */
+
+/* header h2 */
+h2 {
+    font-size: 5vw;
+    text-align: center;
+    color: rgb(46, 139, 87);
+    padding: 5px 10px;
+    
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    color: rgb(46, 139, 87);
+    padding: 10px 0;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* List styling */
+ol {
+    padding-left: 20px;
+    list-style: decimal;
+}
+
+ol li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Main section headings */
+main h2 {
+    font-size: 2em;
+    text-align: center;
+    color: rgb(46, 139, 87);
+    padding: 20px 0;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile section styles */
+.profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.profile-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    width: 100%;
+    flex: 0 0 45%; /* Two items per row */
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 2px solid rgb(46, 139, 87);
+}
+
+.profile-blurb p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Business card section styles */
+#business-card-section :hover {
+    display: none; /* Hidden by default */
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.business-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px) scale(0.95); /* Start with a smaller scale */
+    opacity: 0; /* Start fully transparent */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Make it transition smoothly */
+}
+
+/* Show the business card with a pop-out effect */
+.business-card-section.show .business-card {
+    transform: translateY(0) scale(1); /* Full Size */
+    opacity: 1; /* Fully visible */
+}
+
+.business-profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 2px solid rgb(46, 139, 87);
+}
+
+.business-info h3 {
+    margin: 0 0 10px 0;
+    color: rgb(46, 139, 87);
+    font-size: 1.5em;
+}
+
+.business-info p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.business-info a {
+    color: rgb(38, 164, 202);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.business-info a:hover {
+    color: rgb(46, 139, 87);
+    text-decoration: underline;
+}
+
+/* Close button styles */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Business card responsive media section */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    margin: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin: 0 0 15px 0;
+    }
+
+    .business-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .business-profile-image {
+        margin: 0 0 15px 0;
+    }
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    border-top: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Media query for `inspect/responsive` */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-column {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        padding: 0;
+    }
+}
+/* Enf of header h2 */
+
+/* Nav */
+nav {
+    position: absolute;
+    top: 20px;  /* Original value 20px */
+    right: 20px; /* Original value 20px */
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+li {
+    display: inline-block;
+    color: rgb(38, 164, 202);
+    font-size: 2vw;
+    padding: 8px 16px;
+    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(38, 164, 202);
+}
+
+nav a:hover {
+    text-decoration: underline dotted #f17107;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+        padding: 0;
+    }
+}
+/* End of Adjustments for smaller screens */
+
+/* Profile section styles */
+.profile-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    position: relative;
+    background-color: #f9f9f9;
+    border: #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.05); /* Gives a "Pop-out" effect on hover */
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-blurb {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Add a hover effect to the profile card */
+.profile-card:active {
+    transform: scale(1.1); /* Pop-out'effect' when clicked */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+/* End of Profile section styles */
+
+/* Business card section styles */
+.business-card-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.business-card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.business-profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.business-info {
+    font-size: 1em;
+    color: #333;
+}
+
+.business-info h3 {
+    margin: 0;
+    color: #2e8b57;
+}
+
+.business-info p {
+    margin: 5px 0;
+}
+
+.business-info a {
+    color: #2e8b57;
+    text-decoration: none;
+}
+
+.business-info a:hover {
+    text-decoration: underline;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .business-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .business-profile-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* End of Business card section styles */
+
+/* End of `contact` css */
