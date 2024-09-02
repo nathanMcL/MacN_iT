@@ -1,0 +1,336 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--third-color); /* Same background color as index */
+    color: #333;
+}
+
+/* Color palette from: https://palettes.shecodes.io/palettes/507#palette */
+:root {
+    --first-color: #394a51;
+    --second-color: #7fa99b;
+    --third-color: #fbf2d5;
+    --fourth-color: #fdc57b;
+    /* @MacN_iT text color change */
+    --flag-white: #ffffff;
+    --flag-red: #ff0000;
+    --flag-blue: #0000ff;
+}
+/* End of Body styles */
+
+/* Header styles for the about page */
+.header-about {
+    background-color: var(--first-color);
+    color: white;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+/* Reuse nav styles from index */
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#nav_logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.littlerobot {
+    max-width: 170px;
+    height: auto;
+    margin-right: 5px;
+    margin-left: -300px;
+}
+
+.nav.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav_item a {
+    text-decoration: none;
+    color: var(--fourth-color);
+    font-weight: bold;
+    margin-right: -25px;
+}
+
+.nav_item a.nav_active {
+    color: var(--second-color);
+}
+
+.nav_item a:hover {
+    background-color: var(--second-color);
+}
+
+/* Animation styles for color change */
+.color-change {
+    display: inline-block;
+    animation: colorAnimation 10s infinite;
+}
+
+@keyframes colorAnimation {
+    0%, 100% {
+        color: var(--flag-white);
+    }
+    25% {
+        color: var(--flag-red);
+    }
+    50% {
+        color: var(--flag-white);
+    }
+    75% {
+        color: var(--flag-blue);
+    }
+}
+
+/* Main section styles */
+.main_about {
+    padding: 40px 20px;
+    background-color: var(--third-color);
+}
+
+.about_container {
+    max-width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_section h2 {
+    color: var(--first-color);
+    text-align: center;
+}
+
+.about_section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: var(--third-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Flexbox container */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    gap: 20px;
+}
+
+.flex-column {
+    flex: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flex-column img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* End of Flexbox container */
+
+/* Pop-out blog styles */
+.popout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* darker background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popout-content {
+    background-color: var(--flag-white);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popout-profile-img {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Make sure the image is a square */
+    border-radius: 50%; /* Make the image a circle */
+    object-fit: cover; /* Cover the entire area */
+    margin-bottom: 10px; /* Add space between the iamge and the title */
+    display: block; /* Place the image to appear above the title */
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--flag-red);
+}
+
+/* Initially hidden */
+.hidden {
+    display: none;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .popout-content {
+        max-width: 95%;
+        max-height: 95%;
+        padding: 10px;
+    }
+
+    .close-btn {
+        top: 5px;
+        right: 10px;
+        font-size: 20px;
+    }
+}
+
+/* End of Pop-out blog styles */
+/* End of Main section styling */
+
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--first-color);
+    color: var(--third-color);
+    border-top: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-column {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Marquee styles */
+:root {
+    --marquee-width: 98vw;
+    --marquee-height: 10vh;
+    /* --marquee-elements: 12; */ /* defined with JavaScript */
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+  }
+
+.marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    background-color: #282626;
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto; /* Center and add spacing */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.marquee:before, .marquee:after {
+    position: absolute;
+    top: 0; 
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+.marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+}
+
+.marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+
+.marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    max-height: 100%;
+    font-size: calc(var(--marquee-height)*3/4); /* Adjust size */
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+.marquee-content li img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    :root {
+        --marquee-width: 100vw;
+        --marquee-height: 16vh;
+        --marquee-elements-displayed: 3;
+    }
+    .marquee:before, .marquee:after {
+        width: 5rem;
+    }
+
+    /* For smaller images on smaller screens */
+    .marquee-content img {
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
+/* End of Marquee styles */

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Somewhat more about us on the MacN website!">
+    <title>MacN_iT - Contact</title>
+    <link rel="stylesheet" href="contactStyles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Security headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="no-referrer">
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header-contact">
+        <nav class="navigation">
+            <div class="nav_container">
+                <a href="index.html" id="nav_logo">
+                    <img src="/WebDesignSummer24/Portfolio/images/LittleRobotBackgroundErase.png" alt="MacN_iT Logo" class="littlerobot">
+                    <span class="color-change">@</span><span class="color-change">M</span><span class="color-change">a</span><span class="color-change">c</span><span class="color-change">N</span><span class="color-change">_</span><span class="color-change">i</span><span class="color-change">T</span>
+                </a>
+                <ul class="nav.menu">
+                    <li class="nav_item"><a href="index.html">Home</a></li>
+                    <li class="nav_item"><a href="about.html">About</a></li>
+                    <li class="nav_item"><a href="blog.html">Blog</a></li>
+                    <li class="nav_item"><a href="tools.html">Tools</a></li>
+                    <li class="nav_item"><a class="nav_active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contact Us? Me...</h2>
+            <p>Words that describe the "contact us" page. An idea could be an image of an individual person profile with a 150 char or less blurb clickable image...
+            The clickable profile image could be a recipe styled layout (not sure why I am thinking of a recipe... I will sort it out)...</p>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile-section" class="profile-section">
+            <div id="profile-card" class="profile-card">
+                <img src="/WebDesignSummer24/Portfolio/images/SilhouetteManBizClothing1.jpg" alt="Profile Image" class="profile-image">
+                <div class="profile-blurb">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula justo sit amet orci pharetra.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popout Container -->
+        <div id="popout-container" class="popout hidden">
+            <div class="popout-content">
+                <span id="close-popout" class="close-btn">&times;</span>
+                <!-- Business Card Section -->
+                <section id="business-card-section" class="business-card-section">
+                    <div class="business-card">
+                        <img src="/WebDesignSummer24/Portfolio/images/SilhouetteManBizClothing1.jpg" alt="Profile Image" class="business-profile-image">
+                        <div class="business-info">
+                            <h3>Lorem Ipsum</h3>
+                            <p>Software Engineer at Lorem Co.</p>
+                            <p>Email: <a href="mailto:lorem@ipsum.com">lorem@ipsum.com</a></p>
+                            <p>Portfolio: <a href="#">loremipsum.com</a></p>
+                            <p>LinkedIn: <a href="#">linkedin.com/in/loremipsum</a></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MacN at macn.webwork.space All Rights Reserved</p>
+    </footer>
+
+    <script src="contactScript.js" defer></script>
+</body>
+</html>

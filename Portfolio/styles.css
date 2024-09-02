@@ -1,0 +1,333 @@
+/* Body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--third-color); /* Background using third color */
+    color: #333; /* General text color */
+    border-radius: 2.5px;
+}
+
+/* Color palette from: https://palettes.shecodes.io/palettes/507#palette */
+:root {
+    --first-color: #394a51;
+    --second-color: #7fa99b;
+    --third-color: #fbf2d5;
+    --fourth-color: #fdc57b;
+    /* @MacN_iT text color change */
+    --flag-white: #ffffff;
+    --flag-red: #ff0000;
+    --flag-blue: #0000ff;
+}
+/* End of Body styles */
+
+/* Header styles */
+.header-index {
+    background-color: var(--first-color);
+    color: white;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#nav_logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem; /* To adjust the text size */
+}
+
+.littlerobot {
+    max-width: 170px; /* Adjust the max-width for log scaling */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 5px; /* The space between the logo and text */
+    margin-left: -300px;
+}
+
+.nav.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav_item a {
+    text-decoration: none;
+    color: var(--fourth-color);
+    font-weight: bold;
+    margin-right: -110px; /* Adjust the margin as needed */
+}
+
+.nav_item a,nav_active {
+    color: var(--fourth-color); /* Highlight the active link */
+}
+
+.nav_item a:hover {
+    background-color: var(--second-color);
+}
+
+/* Animation styles for color change */
+.color-change {
+    display: inline-block;
+    animation: colorAnimation 10s infinite;
+}
+
+.color-change:nth-child(1) { /* @ */
+    animation-delay: 0s;
+}
+.color-change:nth-child(2) { /* M */
+    animation-delay: 2s;
+}
+.color-change:nth-child(3) { /* a */
+    animation-delay: 4s;
+}
+.color-change:nth-child(4) { /* c */
+    animation-delay: 6s;
+}
+.color-change:nth-child(5) { /* N */
+    animation-delay: 8s;
+}
+.color-change:nth-child(6) { /* _ */
+    animation-delay: 10s;
+}
+.color-change:nth-child(7) { /* i */
+    animation-delay: 12s;
+}
+.color-change:nth-child(8) { /* T */
+    animation-delay: 14s;
+}
+
+@keyframes colorAnimation {
+    0%, 100% {
+        color: var(--flag-white);
+    }
+    25% {
+        color: var(--flag-red);
+    }
+    50% {
+        color: var(--flag-white);
+    }
+    75% {
+        color: var(--flag-blue);
+    }
+}
+/* End of Animation styles for color change */
+/* End of Header styles */
+
+/* Main section styles */
+.main_home {
+    padding: 40px 20px;
+    background-color: var(--third-color);
+}
+
+.home_container {
+    max-width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome_section h1 {
+    color: var(--first-color);
+}
+
+.welcome_section h2 {
+    color: var(--second-color);
+}
+/* Position the h3 tag at the top left of the home_section */
+.home_section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: flex-start; /* Align the content tot he start of the container */
+    align-items: flex-start; /* Align the content to the top */
+    max-width: 100%; /* Prevent the section from exceeding the container's width */
+    /*overflow-x: hidden;  Prevent horizontal overflow */
+    position: relative; /* To position the h3 within the section */
+}
+
+.home_title {
+    position: absolute;
+    top: 105px; /* Adjust as needed */
+    left: 0;
+    color: var(--first-color);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Have paragraphs to display in a row */
+/* Give the paragraphs a raised look */
+.home_paragraphs {
+    display: flex;
+    flex-direction: column; /* Display the paragraphs side by side */
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px; 
+    background-color: var(--third-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home_paragraphs p {
+    flex: 1;
+    margin-bottom: 5px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.home_column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 100%;  /* Prevent overflow from the column */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    overflow: hidden; /* Hide any overflow from the image */
+}
+
+.home_column h3 {
+    color: var(--first-color);
+    margin-bottom: 10px;
+}
+
+.home_column p {
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Create a button container so the button can be relocated */
+/* Position the Welcome button at the bottom/below the paragraphs */
+.button_container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 1000px; /* Add space above the button */
+    margin-left: -50px; 
+}
+
+.welcome_btn {
+    display: inline-block;
+    background-color: var(--fourth-color);
+    color: var(--third-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.welcome_btn:hover {
+    background-color: var(--second-color);
+}
+
+#home_img {
+    width: 100%;
+    height: 100%; /* Maintain the aspect ratio */
+    max-width: max-content; /* Ensure the image does not exceed the container's width */
+    max-height: max-content; /* Ensure the image does not exceed the container's height */
+    border-radius: 10px;
+    object-fit: scale-down; /* Ensure the image fits within its container */
+}
+/* End of Main section styles */
+
+/* Footer styles */
+footer {
+    background-color: var(--first-color);
+    color: var(--third-color);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+/* End of Footer styles */
+
+/* Responsive styles */
+/* Large screens */
+@media (min-width: 1024px) {
+    .home_section {
+        flex-direction: row;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .home_section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home_column {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #home_img {
+        max-width: 50%;
+        height: auto;
+        object-fit: contain;
+        overflow: hidden;
+    }
+
+    .home_title {
+        position: absolute;
+        top: 5px; /* Adjust as needed */
+    }
+
+    .nav.menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+    .nav_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav.menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home_section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home_column {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #home_image {
+        max-width: 50%;
+    }
+
+    #nav_logo {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    .littlerobot {
+        max-width: 30px;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+/* End of Responsive styles */
