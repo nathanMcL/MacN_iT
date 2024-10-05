@@ -1,0 +1,2 @@
+// index script,js
+
