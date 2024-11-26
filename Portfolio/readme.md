@@ -1,7 +1,7 @@
 ## MacN_it.design
 
-** I noticed the embedded mo4 videos are not playing on mobile... <br>
-- try uploading to YouTube and create a embedded video that way. <br>
+** I noticed the embedded mp4 videos are not playing on mobile... <br>
+- I can try and upload to YouTube and create a embedded video that way... <br>
 
 ### Node Java Script
 
